@@ -1,0 +1,46 @@
+HOW TO USE: brain-link-suggest
+==============================
+
+PURPOSE
+  Discover and establish high-value connections between isolated memories in your
+  Second Brain, linking related decisions, techniques, and tools across projects
+  into a unified knowledge graph.
+
+CAPABILITIES
+  - Analyzes memories to detect cross-project technology and pattern overlap
+  - Checks existing graph edges to prevent duplicate links
+  - Categorizes relationship types (drawn_from, relates_to, supersedes, part_of_project)
+  - Prepares ready-to-run `/brain link` commands with rationale
+  - Batch links confirmed connections with a single command
+
+USE CASES
+  - "What other projects on this PC use similar audio buffer or OSC patterns?"
+  - Connecting a newly documented pattern to the foundational theory memory it was based on
+  - Growing an associative knowledge web automatically without manual link curation
+
+IDEAS
+  - Run `/brain-link-suggest` periodically after logging several new project decisions
+  - Use `--hops 1` during recall to see how linked memories enhance search depth
+
+PROMPTS YOU CAN PASTE
+  /brain-link-suggest
+
+  /brain-link-suggest Live Actions
+
+  /brain-link-suggest mem_8f93a1
+
+EXAMPLE FLOW
+  You:   /brain-link-suggest
+  Agent: [Scans memories, finds unlinked cross-project matches]
+         🕸️ Discovered Graph Synergies:
+         1. Link mem_8f93a1 (Live Actions OSC buffer) -> mem_33a9f1 (DSP Worklet ringbuffer)
+            - Type: relates_to
+            - Rationale: Both use power-of-two ringbuffers with wrap-around pointers
+         Create this connection?
+  You:   yes
+  Agent: [Calls link tool immediately, confirms connected]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Cluster memories for the target topic
+  2. Search for related concepts in other projects
+  3. Present ranked link proposals with relationship types
